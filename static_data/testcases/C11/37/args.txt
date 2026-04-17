@@ -1,0 +1,1 @@
+-s /b// < test_b_a_c.txt

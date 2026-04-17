@@ -1,0 +1,9 @@
+{
+  "title": "main_mystrsubst",
+  "description": "標準入力で与えられた文字列s1, s2, s3を用いて新たな文字列new_strを標準出力する関数main_mystrsubst.cを実装しましょう。",
+  "deadline": "2026/03/14 23:59",
+  "release_date": "2026/03/09 14:30",
+  "criterion": "採点基準です。担当の人は採点基準を書いてください",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

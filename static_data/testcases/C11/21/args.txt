@@ -1,0 +1,1 @@
+-p 1 -r /e/1/ -u -s /fff/fe/ test_random11.txt

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+celery
+redis
+python-multipart
+passlib
+bcrypt<4.0.0
+PyJWT
+requests
+schedule==1.2.1

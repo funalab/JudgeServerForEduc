@@ -1,0 +1,9 @@
+{
+  "title": "My Cat",
+  "description": "EOF (Ctrl + D)を受け取るまで標準入力から文字列を受け取り、標準出力するプログラムmycat.cを実装してください。",
+  "deadline": "2026/03/05 23:59",
+  "release_date": "2026/03/04 10:45",
+  "criterion": "1.入力バッファの概念を伝えて、文字列長無制限に対応できる理由を解説する。\n 2. 可読性",
+  "time_limit": 20.0,
+  "memory_limit": 256
+}

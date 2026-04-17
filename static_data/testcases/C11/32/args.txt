@@ -1,0 +1,1 @@
+-s /a/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/ -s /a/aaa/ -s /aaa/a/ -s /aaa/a/ -s /aaa/a/ -s /aaa/a/ -s /aaaa/a/ < test_long.txt

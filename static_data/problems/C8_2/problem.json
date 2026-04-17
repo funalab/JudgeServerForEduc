@@ -1,0 +1,9 @@
+{
+  "title": "DictStruct",
+  "description": "コマンドライン引数の文字列を辞書順にソートし、標準出力するmain関数を実装したプログラムmain_DictStruct.cを作成し、実行しましょう。",
+  "deadline": "2026/03/11 23:59",
+  "release_date": "2026/03/06 16:15",
+  "criterion": "採点基準です。担当の人は採点基準を書いてください",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

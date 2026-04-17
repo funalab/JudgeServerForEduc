@@ -1,0 +1,1 @@
+-s /a// -s < test_a_a.txt

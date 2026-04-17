@@ -1,0 +1,1 @@
+-u -u < test_a_a.txt

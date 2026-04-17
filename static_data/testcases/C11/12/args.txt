@@ -1,0 +1,1 @@
+-r /abc/0/ -s /dab/aa/ -s /c/fbab/ -s /ee/ccaabc/ test_random02.txt

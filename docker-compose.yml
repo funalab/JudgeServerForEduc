@@ -1,0 +1,82 @@
+#コンテナの列挙
+services:
+  # --- 1. データベース (PostgreSQL) ---
+  db:
+    image: postgres:15
+    ports: ["5433:5432"]
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # --- 2. 行列管理 (Redis) ---
+  redis:
+    image: redis:alpine
+    ports: ["6379:6379"]
+
+  # --- 3. バックエンド (FastAPI) ---
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfiles/dockerfile_backend
+    ports: ["8081:8080"]
+    volumes:
+      - ./backend:/app # for Hot Reload
+      - ./static_data:/app/static_data
+    depends_on:
+      - db
+      - redis
+    env_file: [.env]
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
+
+  # --- 4. ジャッジワーカー (Celery) ---
+  worker:
+    image: my_judge_worker_image
+    build:
+      context: .
+      dockerfile: dockerfiles/dockerfile_backend
+    volumes:
+      - ./backend:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - db
+      - redis
+    env_file: [.env]
+    environment:
+      - HOST_PROJECT_DIR=${PWD}
+    command: >
+      watchmedo auto-restart 
+      --directory=./app 
+      --pattern=*.py 
+      --recursive 
+      -- celery -A app.asyncs.worker.celery_app worker --loglevel=info
+
+  # --- 5. フロントエンド (React) ---
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfiles/dockerfile_frontend
+    ports: ["3000:3000"]
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "npm install && npm run dev -- --host --port 3000"
+
+  # --- 6. Slack定期通知用スケジューラー ---
+  slack-scheduler:
+    build:
+      context: .
+      dockerfile: dockerfiles/dockerfile_backend
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    env_file: [.env]
+    command: python -m app.notification.slack.py
+
+volumes:
+  postgres_data:

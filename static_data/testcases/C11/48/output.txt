@@ -1,0 +1,1 @@
+usage: r option needs string format [/string/[0|1|else]/] after it

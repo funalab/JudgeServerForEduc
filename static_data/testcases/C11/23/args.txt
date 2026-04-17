@@ -1,0 +1,1 @@
+-s /cb/db/ -p 1 -r /ccb/1/ -r /bde/0/ test_random13.txt

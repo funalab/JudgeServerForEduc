@@ -1,0 +1,9 @@
+{
+  "title": "mystrcpy",
+  "description": "標準入力で与えられた文字列をコピーして標準出力するmain関数を実装したプログラムmain_mystrcpy.cを作成してください。",
+  "deadline": "2026/03/11 23:59",
+  "release_date": "2026/03/06 12:15",
+  "criterion": "・関数の戻り値、引数の型が指定されたフォーマット通りになっているか（例えば、const charの部分は変更をしない等）\n・mallocは必ずfreeとセットで書くと良き、メモリの確保に失敗したらreturn 0でプログラムを終了させること\n・終端文字まで含めてコピーをすること、改行文字は取り消すこと（chomp.cを使おう）\n・コピー先の配列は必要な分だけmallocする。mystrlenとかを使う",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

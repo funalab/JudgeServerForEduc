@@ -1,0 +1,1 @@
+-r /b/1/ -p 1 -u -r /cd/0/ -s /e/fcab/ test_random03.txt

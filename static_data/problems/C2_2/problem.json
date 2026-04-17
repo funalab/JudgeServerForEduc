@@ -1,0 +1,9 @@
+{
+  "title": "My Average",
+  "description": "EOFを受け取るまで標準入力に与えられた数値の平均と合計を標準出力するプログラムaverage.cを実装してください。",
+  "deadline": "2026/03/05 23:59",
+  "release_date": "2026/03/04 10:45",
+  "criterion": "可読性",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

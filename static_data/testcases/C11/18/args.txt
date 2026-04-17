@@ -1,0 +1,1 @@
+-s /f/dea/ -r /cb/0/ -s /eed/ffc/ -p 1 -r /bb/1/ -r /dbb/0/ test_random08.txt

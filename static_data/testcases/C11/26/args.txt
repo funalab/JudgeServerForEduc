@@ -1,0 +1,1 @@
+-p -p < test_empty.txt

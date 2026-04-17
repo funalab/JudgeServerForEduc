@@ -1,0 +1,9 @@
+{
+  "title": "main_SortStruct",
+  "description": "標準入力で与えられたplayers情報を年齢順にソートし、標準出力するmain関数を実装したプログラムmain_SortStruct.cを作成し、実行しましょう。\n\n注意事項\n• 前回までの課題で作成した mystr 系の関数を用いると良いかも？\n• メモリリークに気を付ける (free() を忘れない)\n• ソースコードを提出(ヘッダーファイルを用いたなら、それも忘れずに)",
+  "deadline": "2026/03/11 23:59",
+  "release_date": "2026/03/06 16:15",
+  "criterion": "採点基準です。担当の人は採点基準を書いてください",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

@@ -1,0 +1,9 @@
+{
+  "title": "main_mystrlen",
+  "description": "標準入力で与えられた文字列の長さを標準出力する関数main_mystrlen.cを実装してください。",
+  "deadline": "2026/03/09 23:59",
+  "release_date": "2026/03/05 12:15",
+  "criterion": "採点基準です。担当の人は採点基準を書いてください",
+  "time_limit": 4.0,
+  "memory_limit": 256
+}

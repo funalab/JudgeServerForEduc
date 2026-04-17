@@ -1,0 +1,1 @@
+-u -s /c/de/ -r /e/1/ -r /faa/0/ -r /f/0/ -r /e/0/ test_random04.txt

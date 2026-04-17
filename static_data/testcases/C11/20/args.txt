@@ -1,0 +1,1 @@
+-u -s /cfa/fa/ -r /eda/0/ test_random10.txt
